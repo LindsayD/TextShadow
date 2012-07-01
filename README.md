@@ -51,11 +51,12 @@ You can also apply multiple shadows to the same element
 <script>
   $('.shadow')
     .textShadow({ color: '#005', x:1, y:1, blur: 2 })
-    .textShadow('apply', { color: '#cce', x:7, y:7, blur: 2 } );
+    .textShadow('apply', { color: '#cce', x:7, y:7 } );
 </script>
 ```
 
-Any options not specified when calling the apply method will default to the ones in the initialization call to the widget.
+Any options not specified when calling the `apply` method will default to the ones in the initialization call to the widget.  
+For example, `blur` would be `2` in the `apply` call above since it was not specified.
 
 ## Options
 
