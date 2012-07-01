@@ -22,7 +22,9 @@
 #glow {  background: #000; color: #000; }
 #ghost {  background: #fff; color: #fff; }
 #floating {  background: #fff; color: #00d; }
-#double { background: #00cc00; color: #aff; }
+#extruded { background: #0c0; color: #aff; }
+#outline { background: #660066; color: #000; }
+#etched { background: #ccc; color: #aaa; }
 
 </style>
 </head>
@@ -56,8 +58,16 @@
         <div class="shadow">Floating Text!</div>
         <div class="reg">No Shadow</div>
     </div>
-    <div id="double" class="color">
+    <div id="extruded" class="color">
         <div class="shadow">Extruded Text!</div>
+        <div class="reg">No Shadow</div>
+    </div>
+    <div id="outline" class="color">
+        <div class="shadow">Outlined Text!</div>
+        <div class="reg">No Shadow</div>
+    </div>
+    <div id="etched" class="color">
+        <div class="shadow">Etched Text!</div>
         <div class="reg">No Shadow</div>
     </div>
 </div>
@@ -71,13 +81,24 @@ $('#ghost .shadow').textShadow({ color: '#000', x:-1, y:0, blur: 5 });
 $('#floating .shadow')
     .textShadow({ color: '#005', x:1, y:1, blur: 2 })
     .textShadow('apply', { color: '#cce', x:7, y:7, blur: 2 } );
-$('#double .shadow')
+$('#extruded .shadow')
     .textShadow({ color: '#00d', x:-1, y:1, blur: 2 })
-    .textShadow('apply', { color: '#00b', x:-2, y:2, blur: 2 } )
-    .textShadow('apply', { color: '#009', x:-3, y:3, blur: 2 } )
-    .textShadow('apply', { color: '#007', x:-4, y:4, blur: 2 } )
-    .textShadow('apply', { color: '#005', x:-5, y:5, blur: 2 } )
+    .textShadow('apply', { color: '#00b', x:-2, y:2 } )
+    .textShadow('apply', { color: '#009', x:-3, y:3 } )
+    .textShadow('apply', { color: '#007', x:-4, y:4 } )
+    .textShadow('apply', { color: '#005', x:-5, y:5 } )
     .textShadow('apply', { color: '#003', x:-6, y:6, blur: 1 } );
+$('#outline .shadow')
+    .textShadow({ color: '#fff', x:-1, y:-1, blur: 1 })
+    .textShadow('apply', { x:1, y:-1 } )
+    .textShadow('apply', { x:1, y:1 } )
+    .textShadow('apply', { x:-1, y:1 } );
+$('#etched .shadow')
+    .textShadow({ color: '#eee', x:0, y:1, blur: 1 })
+    .textShadow('apply', { x:1, y:1 } )
+    .textShadow('apply', { color: '#333',  x:0, y:-1 } )
+    .textShadow('apply', { color: '#333', x:-1, y:-1 } );
+
 </script>
 <body>
 </html>
