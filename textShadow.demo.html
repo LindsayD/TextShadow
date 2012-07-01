@@ -1,0 +1,83 @@
+<html>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css' />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src=" https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+<script type="text/javascript" src="textShadow.jqw.js"></script>
+<style>
+#content{
+	margin: 20px;   
+	font-family: 'Berkshire Swash';
+	font-weight: bold;
+	max-width: 700px;
+}
+.color { padding: 10px; overflow: hidden; clear: both; }
+.shadow { font-size: 32px; float: left; white-space: no-wrap; width: 270px; }
+.reg { font-size: 28px; float:right;  white-space: no-wrap; width: 150px; text-align:right;}
+
+#subtle{  background: #e9e9e9; color: #fff; }
+#embossed{  background: #000; color: #333; }
+#polished {  background: #ff0033; color: #705; }
+#clean {  background: #fff; color: #f9ff55; }
+#glow {  background: #000; color: #000; }
+#ghost {  background: #fff; color: #fff; }
+#floating {  background: #fff; color: #00d; }
+#double { background: #00cc00; color: #aff; }
+
+</style>
+</head>
+<body>
+<div id="content">
+    <div id="subtle" class="color">
+        <div class="shadow">Subtle Text!</div>
+        <div class="reg">No Shadow</div>
+    </div>
+    <div id="embossed" class="color">
+        <div class="shadow">Embossed Text!</div>
+        <div class="reg">No Shadow</div>
+    </div>
+    <div id="polished" class="color">
+        <div class="shadow">Polished Text!</div>
+        <div class="reg">No Shadow</div>
+    </div>
+    <div id="clean" class="color">
+        <div class="shadow">Clean Text!</div>
+        <div class="reg">No Shadow</div>
+    </div>
+    <div id="glow" class="color">
+        <div class="shadow">Glow Text!</div>
+        <div class="reg">No Shadow</div>
+    </div>
+    <div id="ghost" class="color">
+        <div class="shadow">GhostText!</div>
+        <div class="reg">No Shadow</div>
+    </div>
+    <div id="floating" class="color">
+        <div class="shadow">Floating Text!</div>
+        <div class="reg">No Shadow</div>
+    </div>
+    <div id="double" class="color">
+        <div class="shadow">Extruded Text!</div>
+        <div class="reg">No Shadow</div>
+    </div>
+</div>
+<script type="text/javascript">
+$('#subtle .shadow').textShadow({ color: '#333' });
+$('#embossed .shadow').textShadow({ color: '#fff', x:-1, y:-1, blur: 2 });
+$('#polished .shadow').textShadow({ color: '#502', x:1, blur: 2 });
+$('#clean .shadow').textShadow({ color: '#db0', x:1, blur: 2 });
+$('#glow .shadow').textShadow({ color: '#ffc', x:-1, y:0, blur: 5 });
+$('#ghost .shadow').textShadow({ color: '#000', x:-1, y:0, blur: 5 });
+$('#floating .shadow')
+    .textShadow({ color: '#005', x:1, y:1, blur: 2 })
+    .textShadow('apply', { color: '#cce', x:7, y:7, blur: 2 } );
+$('#double .shadow')
+    .textShadow({ color: '#00d', x:-1, y:1, blur: 2 })
+    .textShadow('apply', { color: '#00b', x:-2, y:2, blur: 2 } )
+    .textShadow('apply', { color: '#009', x:-3, y:3, blur: 2 } )
+    .textShadow('apply', { color: '#007', x:-4, y:4, blur: 2 } )
+    .textShadow('apply', { color: '#005', x:-5, y:5, blur: 2 } )
+    .textShadow('apply', { color: '#003', x:-6, y:6, blur: 1 } );
+</script>
+<body>
+</html>
