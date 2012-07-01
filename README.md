@@ -1,27 +1,56 @@
-TextShadow
-==========
+# TextShadow
 
 jQuery Widget that creates cross-browser consistent (for the most part) text shadows for elements.  It can apply multiple shadows for various effects and works in most browsers including IE6-9.
 
-Requires
-==========
+## Requires
+
 * jQuery v1.3+
 * jQuery UI v1.6.2 +
 
+## Usage
 
-Options
-==========
+Add dependencies:
 
-Option      | Default | Description
-------------|---------|------------------
-x           | 0       | Shadow horizontal offset in pixels
-y           | 1       | Shadow vertical offset in pixels
-blur        | 1       | Amount in pixels of the shadow blur
-color       | #000    | Shadow color
+```html
+<script type="text/javascript" src="[your version]/jquery.min.js"></script>
+<script type="text/javascript" src="[your version]/jquery-ui.min.js"></script>
+<script type="text/javascript" src="textShadow.jqw.js"></script>
+```
+
+Apply textShadow to an element with text:
+
+```html
+<div class="shadow">Awesome shadowed text!</div>
+<script>
+  $(".shadow").textShadow({});
+</script>
+```
+    
+You can override the defaults for the options:
+
+```html
+<div class="shadow">Awesome shadowed text!</div>
+<script>
+  $(".shadow").textShadow({
+  	x: 1,
+  	y: 1,
+  	blur: 2,
+  	color: '#009'
+  });
+</script>
+```
+
+## Options
+
+Option      | Default  | Description
+------------|----------|------------------
+x           | 0        | Shadow horizontal offset in pixels
+y           | 1        | Shadow vertical offset in pixels
+blur        | 1        | Amount in pixels of the shadow blur
+color       | #000     | Shadow color
 
 
-License
-==========
+## License
 
 (The MIT License)
 
