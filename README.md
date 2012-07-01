@@ -2,6 +2,11 @@
 
 jQuery Widget that creates cross-browser consistent (for the most part) text shadows for elements.  It can apply multiple shadows for various effects and works in most browsers including IE6-9.
 
+## Examples 
+### Screenshot
+![example shadows](https://github.com/LindsayD/TextShadow/blob/master/TextShadowWidget.png?raw=true "example shadows")
+### Demo
+[On jsFiddle.net] (http://jsfiddle.net/BlueCockatoo/tb2uc/)
 ## Requires
 
 * jQuery v1.3+
@@ -39,6 +44,19 @@ You can override the defaults for the options:
   });
 </script>
 ```
+You can also apply multiple shadows to the same element
+
+```html
+<div class="shadow">Awesome shadowed text!</div>
+<script>
+  $('.shadow')
+    .textShadow({ color: '#005', x:1, y:1, blur: 2 })
+    .textShadow('apply', { color: '#cce', x:7, y:7 } );
+</script>
+```
+
+Any options not specified when calling the `apply` method will default to the ones in the initialization call to the widget.  
+For example, `blur` would be `2` in the `apply` call above since it was not specified.
 
 ## Options
 
@@ -49,6 +67,12 @@ y           | 1        | Shadow vertical offset in pixels
 blur        | 1        | Amount in pixels of the shadow blur
 color       | #000     | Shadow color
 
+## Methods
+
+Method      | Params   | Description
+------------|----------|------------------
+`apply`     | options  | Applies another text shadow to the element
+`destroy`   |          | Removes all effects and DOM manipulations by the widget
 
 ## License
 
