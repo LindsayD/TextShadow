@@ -12,8 +12,8 @@ This plugin uses CSS3 where available and with a few adjustments for a consisten
 [On jsFiddle.net] (http://jsfiddle.net/BlueCockatoo/tb2uc/)
 ## Requires
 
-* jQuery v1.3+
-* jQuery UI v1.6.2 +
+* jQuery v1.4+
+* jQuery UI v1.6.2+ (UI core + widget factory addon only)
 
 ## Usage
 
