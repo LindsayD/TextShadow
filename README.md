@@ -71,8 +71,8 @@ color       | #000     | Shadow color
 
 Method      | Params   | Description
 ------------|----------|------------------
-apply       | options  | Applies another text shadow to the element
-destroy     |          | Removes all effects and DOM manipulations by the widget
+`apply`     | options  | Applies another text shadow to the element
+`destroy`   |          | Removes all effects and DOM manipulations by the widget
 
 ## License
 
