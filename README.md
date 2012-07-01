@@ -3,7 +3,21 @@ TextShadow
 
 jQuery Widget that creates cross-browser consistent (for the most part) text shadows for elements.  It can apply multiple shadows for various effects and works in most browsers including IE6-9.
 
+Requires
+==========
+* jQuery v1.3+
+* jQuery UI v1.6.2 +
 
+
+Options
+==========
+
+Option      | Default | Description
+------------|---------|------------------
+x           | 0       | Shadow horizontal offset in pixels
+y           | 1       | Shadow vertical offset in pixels
+blur        | 1       | Amount in pixels of the shadow blur
+color       | #000    | Shadow color
 
 
 License
