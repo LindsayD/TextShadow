@@ -2,6 +2,9 @@
 
 jQuery Widget that creates cross-browser consistent (for the most part) text shadows for elements.  It can apply multiple shadows for various effects and works in most browsers including IE6-9.
 
+Why is this cool?  CSS3 can do all this, right?  Not for IE, and there are a few stylistic differences in the implementation of the styles in the other browsers.
+This plugin uses CSS3 where available and with a few adjustments for a consistent look, and also takes care of IE.
+
 ## Examples 
 ### Screenshot
 ![example shadows](https://github.com/LindsayD/TextShadow/blob/master/TextShadowWidget.png?raw=true "example shadows")
