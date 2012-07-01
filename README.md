@@ -44,6 +44,18 @@ You can override the defaults for the options:
   });
 </script>
 ```
+You can also apply multiple shadows to the same element
+
+```html
+<div class="shadow">Awesome shadowed text!</div>
+<script>
+  $('.shadow')
+    .textShadow({ color: '#005', x:1, y:1, blur: 2 })
+    .textShadow('apply', { color: '#cce', x:7, y:7, blur: 2 } );
+</script>
+```
+
+Any options not specified when calling the apply method will default to the ones in the initialization call to the widget.
 
 ## Options
 
@@ -54,6 +66,12 @@ y           | 1        | Shadow vertical offset in pixels
 blur        | 1        | Amount in pixels of the shadow blur
 color       | #000     | Shadow color
 
+## Methods
+
+Method      | Params   | Description
+------------|----------|------------------
+apply       | options  | Applies another text shadow to the element
+destroy     |          | Removes all effects and DOM manipulations by the widget
 
 ## License
 
